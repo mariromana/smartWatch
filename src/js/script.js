@@ -100,16 +100,35 @@ toggle(links);
 toggle(backs);
 
 //modal
-const consultation = document.querySelectorAll('[data-modal="consultation"]')
+const btn = document.querySelectorAll('[data-modal="consultation"]'),
+        close = document.querySelector('.modal__close');
 
-function openModal (elems) {
-    elems.forEach((elem, i) => {
-        elem.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector('.overlay')[i].style.display = 'block'
-        })
-    })
+console.log(close);
+
+// const mod = document.querySelector('#consultation');
+// console.log(mod)
+
+function openModal (modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.style.display = 'block';
 }
-openModal(consultation);
+
+function closeModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.style.display = 'none';
+}
+
+btn.forEach(elem => {
+    elem.addEventListener('click', () => {
+        openModal('.overlay')
+        openModal('#consultation')
+    })
+})
+
+close.addEventListener('click', () => {
+    closeModal('#consultation')
+    closeModal('.overlay')
+})
+// openModal(consultation);
 
 
