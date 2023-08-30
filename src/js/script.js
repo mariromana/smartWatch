@@ -1,5 +1,5 @@
 
-
+//slide
 const slider = tns({
     container: '.carousel__inner',
     items: 1,
@@ -99,42 +99,17 @@ function toggle(elems) {
 toggle(links);
 toggle(backs);
 
+//modal
+const consultation = document.querySelectorAll('[data-modal="consultation"]')
+
+function openModal (elems) {
+    elems.forEach((elem, i) => {
+        elem.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.overlay')[i].style.display = 'block'
+        })
+    })
+}
+openModal(consultation);
 
 
-
-// const link = document.querySelectorAll('.catalog-item__link'),
-//         back = document.querySelectorAll('.catalog-item__back'),
-//         main = document.querySelectorAll('.catalog-item__content'),
-//         descr = document.querySelectorAll('catalog-item__list');
-
-// function hideMainContent () {
-//     e.preventDefault();
-//     main.forEach(item => {
-//         item.classList.toggle('catalog-item__content_active')
-//     })
-   
-// }
-
-// function showMainContent () {
-//     e.preventDefault();
-//     descr.forEach(item => {
-//         item.classList.toggle('catalog-item__list_active')
-//     })
-   
-// }
-
-
-// link[0].addEventListener('click', (e)  => {
-//     const target = e.target;
-//     e.preventDefault();
-//     console.log(target);
-//     // e.preventDefault();
-//     // console.log('ok');
-//     // hideMainContent();
-// });
-
-// // back.addEventListener('click', (e) => {
-// //     e.preventDefault();
-// //     console.log('osk');
-// //     showMainContent();
-// // });
