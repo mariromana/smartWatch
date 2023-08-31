@@ -103,11 +103,7 @@ toggle(backs);
 const btn = document.querySelectorAll('[data-modal="consultation"]'),
         close = document.querySelector('.modal__close');
 
-console.log(close);
-
-// const mod = document.querySelector('#consultation');
-// console.log(mod)
-
+    
 function openModal (modalSelector) {
     const modal = document.querySelector(modalSelector);
     modal.style.display = 'block';
@@ -129,6 +125,7 @@ close.addEventListener('click', () => {
     closeModal('#consultation')
     closeModal('.overlay')
 })
-// openModal(consultation);
+
+
 
 
