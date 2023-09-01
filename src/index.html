@@ -109,14 +109,17 @@
                 Just fill out the application form <br>
                 and we will call you back within 10 minutes
             </div>
-            <form class="feed-form" action="#" >
-        
-                <input name="name" required placeholder="Your name" value="" type="text" >
-                <input name="phone" required placeholder="Your number" value="" type="number" >
-                <input name="email" required placeholder="Your email" value="" type="email" >
-                <button class="button button_submit">book a consultation</button>
 
-            </form>
+                <form id="consultation-form" class="feed-form" action="#">
+        
+                    <input name="name" required  placeholder="Your name"  type="text" >
+                    <input name="phone" required placeholder="Your number" >
+                    <input name="email" required placeholder="Your email"  type="email" >
+                    <button class="button button_submit">book a consultation</button>
+    
+                </form>
+ 
+
         </div>
     </section>
 
@@ -174,7 +177,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -201,7 +204,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -228,7 +231,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -255,7 +258,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -282,7 +285,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -309,7 +312,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
             </div>
@@ -337,7 +340,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -363,7 +366,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -389,7 +392,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
             </div>
@@ -418,7 +421,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button  data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
 
@@ -445,7 +448,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button   data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -471,7 +474,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button class="button button_mini">BUY</button>
+                        <button data-modal="order"class="button button_mini">BUY</button>
                     </div>
                 </div>
             </div>
@@ -576,9 +579,9 @@
 
             <form class="feed-form feed-form_mt25" action="#" >
         
-                <input name="name" required placeholder="Your name" value="" type="text" >
-                <input name="phone" required placeholder="Your number" value="" type="number" >
-                <input name="email" required placeholder="Your email" value="" type="email" >
+                <input name="name" required placeholder="Your name" type="text" >
+                <input name="phone" required placeholder="Your number" >
+                <input name="email" required placeholder="Your email"  type="email" >
                 <button class="button button_submit">book a consultation</button>
 
             </form>
@@ -588,13 +591,13 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">
                 Your order:</div>
-            <div class="modal__descr">Polar FT1 heart rate monitor</div>
-
+            <div class="modal__descr"></div>
+            <!-- Polar FT1 heart rate monitor -->
             <form class="feed-form feed-form_mt25" action="#" >
         
-                <input name="name" required placeholder="Your name" value="" type="text" >
-                <input name="phone" required placeholder="Your number" value="" type="number" >
-                <input name="email" required placeholder="Your email" value="" type="email" >
+                <input name="name"  required  placeholder="Your name" type="text" >
+                <input name="phone" required placeholder="Your number">
+                <input name="email"  required placeholder="Your email"   type="email" >
                 <button class="button button_submit">buy</button>
 
             </form>
@@ -612,6 +615,10 @@
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/script.js"></script>
 </body>

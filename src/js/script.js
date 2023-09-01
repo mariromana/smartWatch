@@ -81,7 +81,7 @@ tabWrapper.addEventListener('click', (e) => {
     }
   });
 
-  //
+//
 
 const links = document.querySelectorAll('.catalog-item__link'),
         backs = document.querySelectorAll('.catalog-item__back');
@@ -100,32 +100,156 @@ toggle(links);
 toggle(backs);
 
 //modal
-const btn = document.querySelectorAll('[data-modal="consultation"]'),
-        close = document.querySelector('.modal__close');
+// const modalConsultation = document.querySelectorAll('[data-modal="consultation"]'),
+//         modalBtnClose = document.querySelectorAll('.modal__close'),
+//         modalBtnBuy = document.querySelectorAll('.button_mini'),
+//         modalDescr = document.querySelectorAll('.modal__descr'),
+//         modalSubtitle = document.querySelectorAll('.catalog-item__subtitle')
+//         orderTrigger = document.querySelectorAll('[data-modal="order"]');
 
+//        console.log(modalDescr)
     
-function openModal (modalSelector) {
-    const modal = document.querySelector(modalSelector);
-    modal.style.display = 'block';
-}
+// function openModal (modalSelector) {
+//     const modal = document.querySelector(modalSelector);
+//     modal.style.display = 'block';
+// }
 
-function closeModal(modalSelector) {
-    const modal = document.querySelector(modalSelector);
-    modal.style.display = 'none';
-}
+// function closeModal(modalSelector) {
+//     const modal = document.querySelector(modalSelector);
+//     modal.style.display = 'none';
+// }
 
-btn.forEach(elem => {
-    elem.addEventListener('click', () => {
-        openModal('.overlay')
-        openModal('#consultation')
+// modalConsultation.forEach(elem => {
+//     elem.addEventListener('click', () => {
+//         openModal('.overlay')
+//         openModal('#consultation')
+//     })
+// })
+
+
+// modalBtnBuy.forEach((elem, i) => {
+//         elem.addEventListener('click', () => {
+//             openModal('.overlay')
+//             openModal('#order')
+//             // modalDescr[i].textContent(modalSubtitle[i]);
+//         });
+
+// })
+
+
+///coment
+
+// orderTrigger.forEach((btn, i) => {
+//     btn.addEventListener('click', () => {
+//         openModal('.overlay')
+//         openModal('#order')
+//         console.log(modalSubtitle[i])
+//         modalDescr[i].textContent(modalSubtitle[i])
+//     });
+// });
+
+// modalBtnBuy.forEach((elem, i) => {
+//     elem.addEventListener('click', () => {
+//         openModal('.overlay')
+//         openModal('#order')
+//         modalDescr[i].textContent(modalSubtitle[i])
+//     })
+// })
+
+
+
+
+
+
+//my
+// modalBtnClose.forEach(elem => {
+//     elem.addEventListener('click', () => {
+//         closeModal('#consultation')
+//         closeModal('#order')
+//         closeModal('.overlay')
+//     } )
+// })
+
+
+
+
+
+
+$('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+});
+
+$('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn('slow');
+    });
+});
+
+
+//validation
+
+
+function validateForms (form) {
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            phone: 'required'
+        },
+        messages: {
+            name: {
+                required: "We need your email address to contact you",
+                minlength: jQuery.validator.format("At least {0} characters required!")
+            },
+            email: {
+              required: "We need your email address to contact you",
+              email: "Your email address must be in the format of name@domain.com"
+            },
+            phone: "Please specify your phone number"
+        
+        }
+        
+    
     })
-})
+}
+validateForms('#consultation-form');
+validateForms('#consultation form');
+validateForms('#order form');
 
-close.addEventListener('click', () => {
-    closeModal('#consultation')
-    closeModal('.overlay')
-})
+$('input[name=phone]').mask("+1 (111) 999-99-99");
 
+
+
+$('form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+    });
+    return false;
+});
 
 
 
