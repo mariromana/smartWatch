@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100&family=Roboto:wght@300;400;700&family=Ubuntu:ital,wght@1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-<!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
-<link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100&family=Roboto:wght@300;400;700&family=Ubuntu:ital,wght@1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link   rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="promo">
+    <div class="promo" id="up" >
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
-                    <img src="icons/logo.png" alt="logo">
+                    <img src="icons/logo_second.png" alt="logo">
                 </a>
                 <div class="header__official">
                     Official representative
@@ -72,10 +71,10 @@
 
     <section class="advantages">
         <div class="container">
-            <div class="title">OUR ADVANTAGES</div>
+            <h2 class="title">OUR ADVANTAGES</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__wrap">
-                    <img src="icons/advantages/cup.svg" alt="cup">
+                    <img src="icons/advantages/cup.svg" alt="cup" class="advantages__icon">
                     <div class="advantages__descr">Sharing experience</div>
                     <div class="advantages__text">
                         Our employees are always ready to share their experience, as they themselves run half marathons, swam across the Bosporus, 
@@ -84,13 +83,13 @@
                 </div>
 
                 <div class="advantages__wrap">
-                    <img src="icons/advantages/heart.svg" alt="heart">
+                    <img src="icons/advantages/heart.svg" alt="heart" class="advantages__icon advantages__icon_animated">
                     <div class="advantages__descr">We care about health</div>
                     <div class="advantages__text">We work to ensure that your sports activities benefit your health and bring joy to you and your loved ones!</div>
                 </div>
 
                 <div class="advantages__wrap">
-                    <img src="icons/advantages/shoe.svg" alt="shoe">
+                    <img src="icons/advantages/shoe.svg" alt="shoe" class="advantages__icon">
                     <div class="advantages__descr">Learn to run</div>
                     <div class="advantages__text">
                         Let us help you learn the right running technique! We are friends with the largest running school in London -  <a href="#">I LOVE RUNNING</a>.
@@ -123,7 +122,7 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -137,10 +136,10 @@
                 </div>
               </div>
                       
-              <button type="button" class="prev"><img src="icons/left.png"></button>
-              <button type="button" class="next"><img src="icons/right.png"></button>
+              <button type="button" class="prev"><img src="icons/left.png" alt="left"></button>
+              <button type="button" class="next"><img src="icons/right.png" alt="right"></button>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -167,7 +166,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li><a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -194,7 +193,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li><a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -221,7 +220,7 @@
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
             
-                            <a href="#" class="catalog-item__back">BACK</a>
+                           <li> <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -248,7 +247,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                          <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -275,7 +274,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li><a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -302,7 +301,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li> <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -330,7 +329,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -357,6 +356,8 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
+
                         </ul>
                     </div>
                     <hr>
@@ -383,6 +384,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -411,7 +413,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -438,7 +440,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -464,7 +466,7 @@
                             <li>You will see an informative graphical indicator of target training heart rate zones;</li>
                             <li>You will also see information about the calorie consumption per workout;</li>
                             <li>You can view data for 10 workouts.</li>
-                            <a href="#" class="catalog-item__back">BACK</a>
+                            <li>  <a href="#" class="catalog-item__back">BACK</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -474,7 +476,7 @@
                             <div class="catalog-item__old-price">99$</div>
                             <div class="catalog-item__new-price">89$</div>
                         </div>
-                        <button data-modal="order"class="button button_mini">BUY</button>
+                        <button data-modal="order" class="button button_mini">BUY</button>
                     </div>
                 </div>
             </div>
@@ -485,7 +487,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="title">customer reviews</h2>
-            <div class="reviews__item">
+            <div class="reviews__item animate__animated animate__fadeInUp ">
                     <img src="img/clients/client1.png" alt="jake" class="reviews__img">
 
                 <div class="reviews__text">
@@ -504,7 +506,7 @@
             </div>
 
 
-            <div class="reviews__item">
+            <div class="reviews__item animate__animated animate__fadeInUp">
                 <img src="img/clients/client2.png" alt="jake" class="reviews__img">
 
             <div class="reviews__text">
@@ -518,7 +520,7 @@
 
         </div>
 
-        <div class="reviews__item">
+        <div class="reviews__item animate__animated animate__fadeInUp">
             <img src="img/clients/client3.png" alt="jake" class="reviews__img">
 
         <div class="reviews__text">
@@ -541,14 +543,10 @@
     <footer class="footer">
         <div class="footer__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.43660792014!2d-73.9656177!3d40.77441459999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2spl!4v1693334994157!5m2!1sen!2spl" 
-            width="100%" 
-            height="630" style="border:0;" allowfullscreen="" 
+           style="border:0;" allowfullscreen="" 
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.43660792014!2d-73.9656177!3d40.77441459999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2spl!4v1693334994157!5m2!1sen!2spl" 
-        width="100%" 
-        height="630" style="border:0;" allowfullscreen="" 
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+     
         <div class="footer__info">
             <address class="footer__addr">
                 5th Ave, New York, NY, USA
@@ -592,7 +590,7 @@
             <div class="modal__subtitle">
                 Your order:</div>
             <div class="modal__descr"></div>
-            <!-- Polar FT1 heart rate monitor -->
+
             <form class="feed-form feed-form_mt25" action="#" >
         
                 <input name="name"  required  placeholder="Your name" type="text" >
@@ -611,12 +609,16 @@
         </div>
 
     </div>
+    <a href="#up" class="pageup">   
+        <img src="icons/up.svg" alt="up" class="pageup">
+    </a>
+
     
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>

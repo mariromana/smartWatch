@@ -7,28 +7,22 @@ const slider = tns({
     autoplay: false,
     controls: false,
     nav: false,
+    mouseDrag: true,
     responsive: {
         640: {
           edgePadding: 20,
-          gutter: 20,
           items: 1,
           touch: true,
-          nav: true,
-          navPosition: "top"
-
+          mouseDrag: true
         },
         700: {
-          gutter: 30,
-          nav: true,
-          touch: true,
-          navPosition: "top"
-
-
+            mouseDrag: true,
+            touch: true,
+            items: 1,
         },
         900: {
           items: 1,
           nav: false
-
         }
       }
     });
@@ -252,4 +246,22 @@ $('form').submit(function(e) {
 });
 
 
+//smooth scroll and pageup
 
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+});
+
+$("a[href^='#up']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+});
+
+
+
+new WOW().init();

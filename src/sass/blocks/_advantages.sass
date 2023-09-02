@@ -2,13 +2,6 @@
     min-height: 473px
     padding: 70px 0 80px 0
     background-color: #F6F6F6
-    // .title
-    //     color: #0D0D0D
-    //     text-align: center
-    //     font-size: 30px
-    //     font-style: normal
-    //     font-weight: 700
-    //     line-height: 30px
     &__wrapper
         display: flex
         justify-content: space-between
@@ -37,3 +30,8 @@
         a
             color: #ff0000
             text-decoration: underline
+    &__icon
+        &_animated
+            animation: heartbeat 2s ease infinite
+            &:hover
+                animation-play-state: paused
